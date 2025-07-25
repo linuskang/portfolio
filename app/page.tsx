@@ -1,7 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Github, Mail, Globe, FileText, ArrowUpRight } from "lucide-react"
+import { Github, Mail, Globe, FileText, ArrowUpRight, Cloud } from "lucide-react"
 
 const DiscordIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -17,14 +17,26 @@ const DiscordIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 const links = [
   {
+    title: "Portfolio",
+    url: "https://about.linus.id.au",
+    icon: FileText,
+    featured: false,
+  },
+  {
     title: "Blog",
     url: "https://linus.id.au/blog",
     icon: Globe,
     featured: false,
   },
   {
+    title: "Whisp",
+    url: "https://linus.id.au/whisp",
+    icon: Cloud,
+    featured: false,
+  },
+  {
     title: "GitHub",
-    url: "https://github.com/linuskang",
+    url: "https://linus.id.au/github",
     icon: Github,
     featured: false,
   },
@@ -40,12 +52,6 @@ const links = [
     icon: Mail,
     featured: false,
   },
-  {
-    title: "Resume",
-    url: "https://resume.linus.id.au",
-    icon: FileText,
-    featured: false,
-  },
 ]
 
 export default function LinktreePage() {
@@ -56,7 +62,7 @@ export default function LinktreePage() {
           <div className="relative mb-8">
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-full blur-xl w-32 h-32 mx-auto"></div>
             <Avatar className="w-28 h-28 mx-auto relative ring-2 ring-white/20 shadow-2xl">
-              <AvatarImage src="/profile-pic.png" alt="Profile Picture" />
+              <AvatarImage src="/profile.png" alt="Profile Picture" />
               <AvatarFallback className="text-3xl font-bold bg-gradient-to-br from-white to-gray-300 text-black">
                 LK
               </AvatarFallback>
